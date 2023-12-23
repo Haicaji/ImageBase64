@@ -1,0 +1,9 @@
+[2023-12-17 21:51:05] 图像成功保存至 E:\PythonFile\png-webp-avif-base64\test-new\basetoimage_out.avif
+[2023-12-17 21:51:05]          
+[2023-12-17 21:51:05] 图片成功转换为 avif 格式，并保存至 E:\PythonFile\png-webp-avif-base64\test-new\jpgtobase.avif
+[2023-12-17 21:51:05] 图片成功转换为 Base64 字符串，并保存至 E:\PythonFile\png-webp-avif-base64\test-new\jpgtobase.txt
+[2023-12-17 21:51:05]          
+[2023-12-17 21:51:05] 图片成功转换为 avif 格式，并保存至 E:\PythonFile\png-webp-avif-base64\test-new\pngtobase.avif
+[2023-12-17 21:51:05] 图片成功转换为 Base64 字符串，并保存至 E:\PythonFile\png-webp-avif-base64\test-new\pngtobase.txt
+[2023-12-17 21:51:05]          
+[2023-12-17 21:51:05] ----------
