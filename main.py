@@ -8,6 +8,7 @@ from ImageBase64.dealIni import readIni
 import sys
 from os import path, walk, system
 
+
 def getArgv():
     # 接收传递给可执行文件的参数
     l = len(sys.argv)
@@ -19,8 +20,9 @@ def getArgv():
     #     raise customError(f"There are too many parameter.")
     else:
         return sys.argv[1:]
-    
-def dealFile(file_path, new_file_path = None, suffix = None):
+
+
+def dealFile(file_path, new_file_path=None, suffix=None):
     defaultformat = '.' + readIni('ImageToImage', 'defaultformat')
 
     # 如果未传入后缀名，获取后缀名
@@ -53,6 +55,7 @@ def dealFile(file_path, new_file_path = None, suffix = None):
         ImageBase64.imageToImage.imageToImage(file_path + suffix, new_avif_path)
         ImageBase64.imageToBase64.imageToBase64(new_avif_path, new_txt_path, defaultformat)
 
+
 def dealFolder(folder_path):
     # 遍历文件夹内所有文件和子文件夹
     for root, dirs, files in walk(folder_path):
@@ -65,8 +68,9 @@ def dealFolder(folder_path):
             new_file_path = path.join(root[-1::-1][::-1] + r"-new", file)
             suffix = path.splitext(file_path)[1]
 
-            dealFile(file_path, new_file_path = new_file_path, suffix=suffix)
+            dealFile(file_path, new_file_path=new_file_path, suffix=suffix)
             ImageBase64.writeLogAndError.writeLog(f"         ")
+
 
 def dealArgv(argv_list):
     for P in argv_list:
@@ -84,6 +88,7 @@ def dealArgv(argv_list):
             raise ImageBase64.customError.CustomError(f"dealArgv()Parameter error.")
         ImageBase64.writeLogAndError.writeLog(f"----------")
 
+
 def main():
     try:
         # 判断allinone是否为True
@@ -100,6 +105,7 @@ def main():
         dealArgv(argv_list)
     except Exception as e:
         ImageBase64.writeLogAndError.writeLog(f"Error: {e}")
+
 
 if __name__ == "__main__":
     main()
